@@ -2,7 +2,8 @@ def my_select(array)
   i = 0
   newArray = []
   while i < array.length
-    newArray << yield(array[i])
+    if yield(array[i]) == true
+      newArray << array[i]
     i += 1
   end
   newArray
